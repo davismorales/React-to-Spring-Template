@@ -1,10 +1,10 @@
-package com.DateDiff;
+package api.dateDiff;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ReactSpringTests {
+class DateDiffTests {
 
 	@Test
 	void contextLoads() {
