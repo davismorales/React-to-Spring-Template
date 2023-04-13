@@ -40,3 +40,6 @@ https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
 PGAdmin4 (6.21): <br> &emsp;
 https://www.postgresql.org/ftp/pgadmin/pgadmin4/v6.21/windows/ <br> &emsp;
 https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v6.21/windows/pgadmin4-6.21-x64.exe
+
+Github Desktop: <br> &emsp;
+https://desktop.github.com/
