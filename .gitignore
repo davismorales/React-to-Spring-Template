@@ -1,4 +1,4 @@
-WebConfig.java
+README.md
 *.classpath
 *.class
 *.prefs
@@ -12,3 +12,4 @@ target/
 .apt_generated
 .sts4-cache
 .springBeans
+WebConfig.java
