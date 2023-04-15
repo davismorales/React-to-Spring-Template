@@ -13,3 +13,4 @@ target/
 .sts4-cache
 .springBeans
 WebConfig.java
+mapperservice\src\main\resources\application.properties
