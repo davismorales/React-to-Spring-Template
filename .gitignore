@@ -1,1 +1,15 @@
-webapp/src/main/java/api/WebConfig.java
+README.md
+*.classpath
+*.class
+*.prefs
+*.jar
+*.lst
+*.project
+*.factorypath
+*.original
+target/
+.settings/
+.apt_generated
+.sts4-cache
+.springBeans
+WebConfig.java
