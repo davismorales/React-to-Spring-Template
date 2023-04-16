@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-import api.dateDiff.model.DateDiff;
+import api.dateDiff.model.CalcDiffResult;
 import api.dateDiff.service.DateDiffWebServiceImpl;
 
 @RestController
@@ -21,8 +21,8 @@ public class DateDiffWebController {
 	DateDiffWebServiceImpl dateDiffWebServiceImpl;
 
 	@RequestMapping(value = "/calcDiff", method = RequestMethod.POST, consumes = { "application/json" })
-	public DateDiff calcDiff(@RequestBody DateDiff dateDiff) throws IllegalAccessException, InvocationTargetException, JsonMappingException, JsonProcessingException {
-		return dateDiffWebServiceImpl.calculateDifference(dateDiff);
+	public CalcDiffResult calcDiff(@RequestBody CalcDiffResult dateDiff) throws IllegalAccessException, InvocationTargetException, JsonMappingException, JsonProcessingException {
+		return dateDiffWebServiceImpl.calculateDifference(dateDiff); 
 	}
 
 }

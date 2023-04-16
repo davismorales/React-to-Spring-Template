@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
+  <!-- <properties resource="mybatis/db.properties"/>  -->
   <context id="context1" targetRuntime="MyBatis3">
-    <jdbcConnection driverClass="{jdbc.postgresql.driver}"
-	                connectionURL="{jdbc.postgresql.url}"
-	                userId="{jdbc.postgresql.username}"
-	                password="{jdbc.postgresql.password}">
+    <jdbcConnection driverClass="org.postgresql.Driver"
+	                connectionURL="jdbc:postgresql://192.168.0.100:5432/reactspringdb"
+	                userId="reactspring"
+	                password="reactspring">
     </jdbcConnection>
     <javaModelGenerator targetPackage="mybatis.datediff.model" targetProject="mapperservice" />
-    <sqlMapGenerator targetPackage="mybatis.datediff.mapper" targetProject="mapperservice/src/main/resources"></sqlMapGenerator>
+    <sqlMapGenerator targetPackage="mybatis.mappers" targetProject="mapperservice/src/main/resources"></sqlMapGenerator>
     <javaClientGenerator targetPackage="mybatis.datediff.mapper" targetProject="mapperservice" type="XMLMAPPER" />
     <table schema="reactspring" tableName="date_diff" 
     	   enableInsert="true" enableUpdateByPrimaryKey="true ">

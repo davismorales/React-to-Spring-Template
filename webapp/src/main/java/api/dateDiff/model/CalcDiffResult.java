@@ -1,11 +1,7 @@
 package api.dateDiff.model;
 
-public class DateDiff {
+public class CalcDiffResult {
 
-	private String fromDate;
-	private String fromTime;
-	private String toDate;
-	private String toTime;
 	private String result;
 	private String years;
 	private String months;
@@ -13,38 +9,6 @@ public class DateDiff {
 	private String hours;
 	private String minutes;
 	private String seconds;
-
-	public String getFromDate() {
-		return fromDate;
-	}
-
-	public void setFromDate(String fromDate) {
-		this.fromDate = fromDate;
-	}
-
-	public String getFromTime() {
-		return fromTime;
-	}
-
-	public void setFromTime(String fromTime) {
-		this.fromTime = fromTime;
-	}
-
-	public String getToDate() {
-		return toDate;
-	}
-
-	public void setToDate(String toDate) {
-		this.toDate = toDate;
-	}
-
-	public String getToTime() {
-		return toTime;
-	}
-
-	public void setToTime(String toTime) {
-		this.toTime = toTime;
-	}
 
 	public String getResult() {
 		return result;
