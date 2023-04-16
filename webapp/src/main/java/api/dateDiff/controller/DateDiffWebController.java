@@ -13,6 +13,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 
 import api.dateDiff.model.CalcDiffResult;
 import api.dateDiff.service.DateDiffWebServiceImpl;
+import mybatis.datediff.model.DateDiff;
 
 @RestController
 @RequestMapping(value = "/dateDiff")
@@ -21,7 +22,7 @@ public class DateDiffWebController {
 	DateDiffWebServiceImpl dateDiffWebServiceImpl;
 
 	@RequestMapping(value = "/calcDiff", method = RequestMethod.POST, consumes = { "application/json" })
-	public CalcDiffResult calcDiff(@RequestBody CalcDiffResult dateDiff) throws IllegalAccessException, InvocationTargetException, JsonMappingException, JsonProcessingException {
+	public CalcDiffResult calcDiff(@RequestBody DateDiff dateDiff) throws IllegalAccessException, InvocationTargetException, JsonMappingException, JsonProcessingException {
 		return dateDiffWebServiceImpl.calculateDifference(dateDiff); 
 	}
 

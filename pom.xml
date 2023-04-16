@@ -13,6 +13,5 @@
   
   <modules>
   	<module>webapp</module>
-  	<module>mapperservice</module>
   </modules>   
 </project>

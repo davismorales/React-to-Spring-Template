@@ -16,9 +16,9 @@ public class DateDiffWebServiceImpl {
 
 	DateDiffDBServiceImpl dateDiffDBService;
 	
-	public CalcDiffResult calculateDifference(CalcDiffResult result) {
+	public CalcDiffResult calculateDifference(DateDiff dateDiff) {
+		CalcDiffResult result = new CalcDiffResult();
 		try {
-			DateDiff dateDiff = new DateDiff();
 			String date1 = dateDiff.getFromDate() + " " + dateDiff.getFromTime();
 			String date2 = dateDiff.getToDate() + " " + dateDiff.getToTime();
 			LocalDateTime from = LocalDateTime.parse(date1, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
@@ -62,11 +62,12 @@ public class DateDiffWebServiceImpl {
 			result.setSeconds("Seconds:\t" + seconds);
 			fromTemp = fromTemp.plusSeconds(seconds);
 			
-			dateDiffDBService.calcDiff(dateDiff);
+			System.out.println(dateDiffDBService.calcDiff(dateDiff));
 
 			result.setResult(String.format("\nYears:\t\t%s\nMonths:\t\t%s\nDays:\t\t%s<br>Hours:\t\t%s<hr>Minutes:\t%s<hr>Seconds:\t%s", years, months, days, hours, minutes, seconds));
 			return result;
 		} catch (Exception e) {
+			System.out.println(e);
 			result.setResult("\nIncorrect Input. Must be in ISO Date Format: 'yyyy-MM-dd HH:mm:ss'");
 			result.setYears("\nIncorrect Input. Must be in ISO Date Format: 'yyyy-MM-dd HH:mm:ss'");
 			return result;

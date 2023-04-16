@@ -7,7 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-@MapperScan({"mybatis.mappers"})
+@MapperScan("mybatis.**.mapper")
 public class ReactSpringInitializer extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
