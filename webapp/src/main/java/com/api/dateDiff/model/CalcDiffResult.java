@@ -1,4 +1,4 @@
-package api.dateDiff.model;
+package com.api.dateDiff.model;
 
 public class CalcDiffResult {
 

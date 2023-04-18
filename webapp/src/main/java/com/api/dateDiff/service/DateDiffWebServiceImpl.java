@@ -1,21 +1,22 @@
-package api.dateDiff.service;
+package com.api.dateDiff.service;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import api.dateDiff.model.CalcDiffResult;
-import mybatis.datediff.DBService.DateDiffDBServiceImpl;
-import mybatis.datediff.model.DateDiff;
+import com.api.dateDiff.model.CalcDiffResult;
+import com.mybatis.datediff.dbservice.DateDiffDBServiceImpl;
+import com.mybatis.datediff.model.DateDiff;
 
-//@WebServlet("/DateDiffJavaClass")
 @Service
 public class DateDiffWebServiceImpl {
 
+	@Autowired
 	DateDiffDBServiceImpl dateDiffDBService;
-	
+
 	public CalcDiffResult calculateDifference(DateDiff dateDiff) {
 		CalcDiffResult result = new CalcDiffResult();
 		try {
@@ -61,7 +62,7 @@ public class DateDiffWebServiceImpl {
 			dateDiff.setSeconds(seconds);
 			result.setSeconds("Seconds:\t" + seconds);
 			fromTemp = fromTemp.plusSeconds(seconds);
-			
+
 			System.out.println(dateDiffDBService.calcDiff(dateDiff));
 
 			result.setResult(String.format("\nYears:\t\t%s\nMonths:\t\t%s\nDays:\t\t%s<br>Hours:\t\t%s<hr>Minutes:\t%s<hr>Seconds:\t%s", years, months, days, hours, minutes, seconds));

@@ -4,15 +4,16 @@
   <!-- <properties resource="mybatis/db.properties"/>  -->
   <context id="context1" targetRuntime="MyBatis3">
     <jdbcConnection driverClass="org.postgresql.Driver"
-	                connectionURL="jdbc:postgresql://192.168.0.100:5432/reactspringdb"
+	                connectionURL="jdbc:postgresql://localhost:5432/reactspringdb"
 	                userId="reactspring"
 	                password="reactspring">
     </jdbcConnection>
-    <javaModelGenerator targetPackage="mybatis.datediff.model" targetProject="mapperservice" />
-    <sqlMapGenerator targetPackage="mybatis.mappers" targetProject="mapperservice/src/main/resources"></sqlMapGenerator>
-    <javaClientGenerator targetPackage="mybatis.datediff.mapper" targetProject="mapperservice" type="XMLMAPPER" />
+    <javaModelGenerator targetPackage="com.mybatis.datediff.model" targetProject="webapp" />
+    <sqlMapGenerator targetPackage="com.mybatis.datediff.mapper" targetProject="webapp/src/main/resources"></sqlMapGenerator>
+    <javaClientGenerator targetPackage="com.mybatis.datediff.mapper" targetProject="webapp" type="XMLMAPPER" />
     <table schema="reactspring" tableName="date_diff" 
     	   enableInsert="true" enableUpdateByPrimaryKey="true ">
+    	   <generatedKey column="pk" sqlStatement="SELECT nextval('reactspring.&quot;dateDiff_pk_seq&quot;'::regclass)::int8" />
     </table>
   </context>
 </generatorConfiguration>
