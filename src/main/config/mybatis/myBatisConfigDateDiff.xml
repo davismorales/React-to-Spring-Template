@@ -8,9 +8,9 @@
 	                userId="reactspring"
 	                password="reactspring">
     </jdbcConnection>
-    <javaModelGenerator targetPackage="com.mybatis.datediff.model" targetProject="webapp" />
-    <sqlMapGenerator targetPackage="com.mybatis.datediff.mapper" targetProject="webapp/src/main/resources"></sqlMapGenerator>
-    <javaClientGenerator targetPackage="com.mybatis.datediff.mapper" targetProject="webapp" type="XMLMAPPER" />
+    <javaModelGenerator targetPackage="com.mybatis.datediff.model" targetProject="ReactSpring" />
+    <sqlMapGenerator targetPackage="com.mybatis.datediff.mapper" targetProject="ReactSpring/src/main/resources"></sqlMapGenerator>
+    <javaClientGenerator targetPackage="com.mybatis.datediff.mapper" targetProject="ReactSpring" type="XMLMAPPER" />
     <table schema="reactspring" tableName="date_diff" 
     	   enableInsert="true" enableUpdateByPrimaryKey="true ">
     	   <generatedKey column="pk" sqlStatement="SELECT nextval('reactspring.&quot;dateDiff_pk_seq&quot;'::regclass)::int8" />
