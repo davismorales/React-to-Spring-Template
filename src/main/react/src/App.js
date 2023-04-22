@@ -9,7 +9,6 @@ function App() {
   const [returnData, setReturnData] = useState(null)
 
   async function dateDiff() {
-    debugger
     var formData = {
       fromDate: fromDate,
       toDate: toDate,
@@ -25,7 +24,6 @@ function App() {
       body: JSON.stringify(formData)
     }).then(response => response.json())
       .then(data => {
-        debugger
         console.log(data)
         setReturnData(data)
       });
