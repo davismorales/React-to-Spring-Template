@@ -63,7 +63,7 @@ public class DateDiffWebServiceImpl {
 			result.setSeconds("Seconds:\t" + seconds);
 			fromTemp = fromTemp.plusSeconds(seconds);
 
-			System.out.println(dateDiffDBService.calcDiff(dateDiff));
+			dateDiffDBService.calcDiff(dateDiff);
 
 			result.setResult(String.format("\nYears:\t\t%s\nMonths:\t\t%s\nDays:\t\t%s<br>Hours:\t\t%s<hr>Minutes:\t%s<hr>Seconds:\t%s", years, months, days, hours, minutes, seconds));
 			return result;
