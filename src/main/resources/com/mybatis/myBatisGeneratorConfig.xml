@@ -12,6 +12,7 @@
 	                  userId="${spring.datasource.username}"
 	                  password="${spring.datasource.password}">
     </jdbcConnection>
+    <!--Must use the com.mybatis.**.model/mapper structure to maintain continuity with @MapperScan-->
     <javaModelGenerator targetPackage="com.mybatis.datediff.model" targetProject="src/main/java" />
     <sqlMapGenerator targetPackage="com.mybatis.datediff.mapper" targetProject="src/main/resources"></sqlMapGenerator>
     <javaClientGenerator targetPackage="com.mybatis.datediff.mapper" targetProject="src/main/java" type="XMLMAPPER" />

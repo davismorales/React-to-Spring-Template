@@ -17,6 +17,7 @@
   
 	<properties>
 	    <java.version>1.8</java.version>
+        <maven.version>3.6.3</maven.version>
 		<frontend-src-dir>${project.basedir}/src/main/react</frontend-src-dir>
 		<node.version>v19.8.1</node.version>
 		<yarn.version>v1.22.19</yarn.version>
