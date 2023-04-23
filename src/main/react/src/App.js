@@ -34,26 +34,26 @@ function App() {
       <div class="row" >
         <div align="center" class="form-group col-md-3 col-sm-3 ">
           <label class="control-label" title="Enter From Date">
-          From Hello Date:&nbsp;
+          From Date: (yyyy-MM-dd)&nbsp;
           </label>
           <input class="col form-control" value={fromDate} onChange={(e) => setFromDate(e.target.value)} /> 
         </div>
         <div align="center" class="form-group col-md-3 col-sm-3">
           <label class="control-label" title="Enter From Date">
-          From Time:&nbsp;
+          From Time: (HH:mm:ss)&nbsp;
           </label>
           <input class="col form-control" value={fromTime} onChange={(e) => setFromTime(e.target.value)} /> 
         </div>
         
         <div align="center" class="form-group col-md-3 col-sm-3">
           <label class="control-label" title="Enter To Date">
-          To Date:&nbsp;
+          To Date: (yyyy-MM-dd)&nbsp;
           </label>
           <input class="col form-control" value={toDate} onChange={(e) => setToDate(e.target.value)} /> 
         </div>
         <div align="center" class="form-group col-md-3 col-sm-3">
           <label class="control-label" title="Enter To Date">
-          To Time:&nbsp;
+          To Time: (HH:mm:ss)&nbsp;
           </label>
           <input class="col form-control" value={toTime} onChange={(e) => setToTime(e.target.value)} /> 
         </div>
